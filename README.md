@@ -16,6 +16,10 @@ To run
 npm start
 ```
 
+## API key
+
+- Obtain a Google maps api key and paste in bootstrapURLKeys in GoogleMap.js
+
 ## Built With
 
 - React.js
