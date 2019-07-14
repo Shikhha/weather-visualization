@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import MakeChart from "../components/chart";
+import MakeChart from "../components/chart/Chart";
 
 class Weather_list extends Component {
   tempData = cityList => {
@@ -14,9 +14,7 @@ class Weather_list extends Component {
       <tr key={cityData.city.name}>
         <td>{cityData.city.name}</td>
         <td>
-          <Sparklines data={temps}>
-            <SparklinesLine color="red" />
-          </Sparklines>
+          <MakeChart data={temps} color="orange" />
         </td>
       </tr>
     );
@@ -30,7 +28,6 @@ class Weather_list extends Component {
             <th>Temperature</th>
             <th>Pressure</th>
             <th>Humidity</th>
-            <th onClick={this.callprops}>click</th>
           </tr>
         </thead>
         <tbody>{this.props.weather.map(this.renderWeather)}</tbody>

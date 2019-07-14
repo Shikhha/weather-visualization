@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 
-const MakeChart = (data, color) => {
+export default ({ data, color }) => {
   return (
-    <Sparklines data={data}>
-      <SparklinesLine color="red" />
+    <Sparklines height={100} width={160} data={data}>
+      <SparklinesLine color={color} />
     </Sparklines>
   );
 };
