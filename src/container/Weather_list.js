@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Sparklines, SparklinesLine } from "react-sparklines";
+import MakeChart from "../components/chart";
 
 class Weather_list extends Component {
   tempData = cityList => {
