@@ -6,3 +6,8 @@ td {
 svg {
   height: 130px;
 }
+
+.custom-container {
+  width: 95%;
+  margin: auto;
+}
