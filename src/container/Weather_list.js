@@ -23,19 +23,25 @@ class Weather_list extends Component {
     const temps = this.tempData(cityData.list);
     const pressure = this.PressureData(cityData.list);
     const humidity = this.HumidityData(cityData.list);
+    const lon = cityData.city.coord.lon;
+    const lat = cityData.city.coord.lat;
+    const center = {
+      lat: lat,
+      lng: lon
+    };
     return (
       <tr key={cityData.city.name}>
         <td>
-          <Map zoom={12} />
+          <Map zoom={12} center={center} />
         </td>
         <td>
           <MakeChart data={temps} color="orange" units="K" />
         </td>
         <td>
-          <MakeChart data={pressure} color="orange" units="hPa" />
+          <MakeChart data={pressure} color="green" units="hPa" />
         </td>
         <td>
-          <MakeChart data={humidity} color="orange" units="%" />
+          <MakeChart data={humidity} color="black" units="%" />
         </td>
       </tr>
     );
