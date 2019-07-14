@@ -19,8 +19,7 @@ npm start
 ## Built With
 
 - React.js
-- CSS
-- Firebase
+- Bootstrap4
 
 ## Packages used
 
